@@ -1,0 +1,5 @@
+# The Virtuall Enviroment of the Project
+venv
+.idea
+.vscode
+
