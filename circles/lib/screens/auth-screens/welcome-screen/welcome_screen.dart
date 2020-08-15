@@ -16,7 +16,8 @@ class WelcomeScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/four.jpg"),
+                      image:
+                          AssetImage("assets/images/welcome-screen/four.jpg"),
                       fit: BoxFit.cover)),
               child: Container(
                 decoration: BoxDecoration(
@@ -71,4 +72,3 @@ class WelcomeScreen extends StatelessWidget {
         ));
   }
 }
-
