@@ -62,13 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                 Spacer(
                   flex: 5,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-                  child: SizedBox(
-                    height: 50,
-                    child: WelcomeScreenButton(),
-                  ),
-                ),
+                WelcomeScreenButton(),
               ],
             ),
           ),
