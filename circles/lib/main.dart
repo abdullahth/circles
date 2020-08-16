@@ -1,4 +1,5 @@
 import 'package:circles/constants.dart';
+import 'package:circles/routes.dart';
 import 'package:circles/screens/auth-screens/welcome-screen/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: WelcomeScreen(),
+      routes: routes,
     );
   }
 }
