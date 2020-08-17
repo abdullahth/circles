@@ -9,7 +9,9 @@ Padding authFormInput({String label, Icon suffixIcon}) {
         decoration: InputDecoration(
             suffixIcon: suffixIcon,
             labelText: "$label",
-            hintText: "Enter Your $label!",
+            hintText: label.split('-')[0] == "Re"
+                ? "Re-Enter Your $label!"
+                : "Enter Your ${label.split('-')[label.split('-').length - 1]}!",
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(25),
               borderSide: BorderSide(color: cPrimaryColor),

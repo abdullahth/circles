@@ -1,4 +1,4 @@
-import 'package:circles/screens/auth-screens/auth-pages/components/signin-body.dart';
+import 'package:circles/screens/auth-screens/auth-pages/signin-body.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants.dart';

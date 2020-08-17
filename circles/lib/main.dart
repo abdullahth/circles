@@ -1,6 +1,6 @@
 import 'package:circles/constants.dart';
 import 'package:circles/routes.dart';
-import 'package:circles/screens/auth-screens/welcome-screen/welcome_screen.dart';
+import 'package:circles/screens/auth-screens/auth-pages/signin-body.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: cPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        backgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: SignInBody(),
       routes: routes,
     );
   }

@@ -1,5 +1,5 @@
-import 'package:circles/screens/auth-screens/auth-pages/components/signin-body.dart';
-import 'package:circles/screens/auth-screens/auth-pages/components/signup-body.dart';
+import 'package:circles/screens/auth-screens/auth-pages/signin-body.dart';
+import 'package:circles/screens/auth-screens/auth-pages/signup-body.dart';
 import 'package:circles/screens/auth-screens/auth-pages/signin-successful.dart';
 import 'package:flutter/material.dart';
 

@@ -17,3 +17,16 @@ final cDarkModeAccentColorColor = cAccentColor;
 final cDarkModeTextColor = Colors.white;
 
 final defultPadding = 12.0;
+
+// Size Config Methods will be here instead of creating new file
+double proportionateHieght(BuildContext context, double inputHieght) {
+  final double DEVICE_HIEGHT = MediaQuery.of(context).size.height;
+
+  return (inputHieght / 812.0) * DEVICE_HIEGHT;
+}
+
+double proportionateWidth(BuildContext context, double inputWidth) {
+  final double DEVICE_WIDTH = MediaQuery.of(context).size.width;
+
+  return (inputWidth / 812.0) * DEVICE_WIDTH;
+}
