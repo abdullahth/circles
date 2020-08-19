@@ -1,5 +1,6 @@
+import 'package:circles/auth/google-auth.dart';
 import 'package:circles/constants.dart';
-import 'package:circles/screens/auth-screens/auth-pages/signin-successful.dart';
+// import 'package:circles/screens/auth-screens/auth-pages/signin-successful.dart';
 import 'package:circles/screens/auth-screens/auth-pages/signup-body.dart';
 import 'package:circles/screens/auth-screens/auth-pages/widgets/form-input-field.dart';
 import 'package:flutter/material.dart';
@@ -90,8 +91,8 @@ class _SignInBodyState extends State<SignInBody> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, SignInSuccessful().routeName);
+                          // Navigator.pushNamed(
+                          //     context, SignInSuccessful().routeName);
                         },
                         color: cPrimaryColor,
                         splashColor: Colors.transparent,
@@ -182,7 +183,7 @@ class _SignInBodyState extends State<SignInBody> {
                                 padding: const EdgeInsets.all(12),
                                 child: GestureDetector(
                                   onTap: () {
-                                    // Sign in with Facebook
+                                    signInWithGoogle();
                                   },
                                   child: Container(
                                     height: 50,
