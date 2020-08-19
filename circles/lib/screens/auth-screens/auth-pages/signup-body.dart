@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../../../constants.dart';
-import 'signin-successful.dart';
+// import 'signin-successful.dart';
 
 class SignUpBody extends StatefulWidget {
   final String routeName = "/SIGN_UP";
@@ -70,8 +70,8 @@ class _SignUpBodyState extends State<SignUpBody> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, SignInSuccessful().routeName);
+                          // Navigator.pushNamed(
+                          //     context, SignInSuccessful().routeName);
                         },
                         color: cPrimaryColor,
                         splashColor: Colors.transparent,
