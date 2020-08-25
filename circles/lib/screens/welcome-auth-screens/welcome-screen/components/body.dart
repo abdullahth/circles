@@ -1,7 +1,7 @@
 import 'package:circles/config/dim-config.dart';
+import 'package:circles/constants/button.dart';
 import 'package:circles/screens/welcome-auth-screens/auth/signin/signin.dart';
 import 'package:flutter/material.dart';
-
 
 class Body extends StatelessWidget {
   const Body({
@@ -56,33 +56,16 @@ class Body extends StatelessWidget {
             Spacer(
               flex: 5,
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Container(
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50), color: Colors.red),
-                child: SizedBox(
-                  height:
-                      proptionateHieght(36, MediaQuery.of(context).size.height),
-                  width: double.infinity,
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, SignInPage.route);
-                    },
-                    child: RichText(
-                        text: TextSpan(
-                            text: "Continue!",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 24))),
-                  ),
-                ),
-              ),
-            ),
+            buildDefultButton(
+                context: context,
+                label: "Continue!",
+                onPressed: () {
+                  Navigator.pushNamed(context, SignInPage.route);
+                }),
             Spacer()
           ],
         ),
       ),
     );
-  }
+  }  
 }
