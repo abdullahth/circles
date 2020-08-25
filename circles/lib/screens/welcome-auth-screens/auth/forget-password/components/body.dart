@@ -42,7 +42,7 @@ class _BodyState extends State<Body> {
         RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: "An Email Adress will be \nsent to you ASAP!",
+                text: "An Email will be sent to your\n Email Adress ASAP!",
                 style: TextStyle(color: Colors.black45, fontSize: 20))),
         SizedBox(
           height: proptionateHieght(80, deviceHieght),
