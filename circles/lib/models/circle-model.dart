@@ -1,0 +1,11 @@
+import 'package:location/location.dart';
+
+class Circle {
+  String header, bio, rules, imageUrl, createrUid;
+  int freeSeates, occ;
+  var scheduledTo;
+  Location location;
+
+  Circle(this.header, this.bio, this.rules, this.imageUrl, this.createrUid,
+      this.freeSeates, this.occ, this.scheduledTo, this.location);
+}
