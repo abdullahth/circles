@@ -7,6 +7,7 @@ SliverAppBar homePageAppBar(BuildContext context) {
   final String userName = "User";
   final String url =
       "https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain-820x532.jpg";
+  final ImageProvider<Object> appBarBackgroundImage = NetworkImage(url);
   return SliverAppBar(
       expandedHeight:
           proptionateHieght(170, MediaQuery.of(context).size.height),
@@ -24,9 +25,7 @@ SliverAppBar homePageAppBar(BuildContext context) {
                     onTap: () {/**TODO:Opens the User Profile Page */},
                     child: CircleAvatar(
                       radius: 50,
-                      backgroundImage: NetworkImage(
-                        url,
-                      ),
+                      backgroundImage: appBarBackgroundImage,
                     ),
                   ),
                   Spacer()
@@ -37,9 +36,7 @@ SliverAppBar homePageAppBar(BuildContext context) {
           ),
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: NetworkImage(
-              url,
-            ),
+            image: appBarBackgroundImage,
             fit: BoxFit.cover,
           )),
         ),
