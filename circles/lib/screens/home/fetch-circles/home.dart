@@ -1,18 +1,19 @@
 import 'dart:ui';
 
 import 'package:circles/config/dim-config.dart';
+import 'package:circles/constants/dummy-values.dart';
 import 'package:flutter/material.dart';
 
 import 'components/appbar.dart';
 import 'components/circle-list-item.dart';
 
-class HomePage extends StatefulWidget {
-  static String route = "HOME_PAGE_ROUTE";
+class FetchCircles extends StatefulWidget {
+  static String route = "FETCH_CIRCLES_ROUTE";
   @override
-  _HomePageState createState() => _HomePageState();
+  _FetchCirclesState createState() => _FetchCirclesState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _FetchCirclesState extends State<FetchCircles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +24,9 @@ class _HomePageState extends State<HomePage> {
         homePageAppBar(context),
         SliverList(
             delegate: SliverChildBuilderDelegate(
-                (context, index) => CircleListItem(),
-                childCount: 25)),
+                (context, index) =>
+                    circleListItem(context, dummyCircles[index]),
+                childCount: dummyCircles.length)),
       ]),
     );
   }
