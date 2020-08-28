@@ -1,17 +1,15 @@
 import 'package:circles/config/dim-config.dart';
+import 'package:circles/models/circle-model.dart';
+import 'package:circles/screens/details-screens/circle/circle-details.dart';
 import 'package:flutter/material.dart';
 
-class CircleListItem extends StatelessWidget {
-  const CircleListItem(
-      // Circle Will be Added after Initializing Circle Model
-      // Circle circle,
-      {
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
+Widget circleListItem(BuildContext context, Circle circle) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, CircleDetails.route,
+          arguments: CircleDetails(circle: circle));
+    },
+    child: Padding(
       padding: EdgeInsets.only(left: 12, right: 12, top: 8, bottom: 6),
       child: Container(
         width: double.infinity,
@@ -26,7 +24,7 @@ class CircleListItem extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: RichText(
                   text: TextSpan(
-                      text: "Circle Title", style: TextStyle(fontSize: 30))),
+                      text: circle.header, style: TextStyle(fontSize: 30))),
             ),
             Positioned(
               right: 0,
@@ -49,7 +47,9 @@ class CircleListItem extends StatelessWidget {
                 right: 10,
                 child: Row(
                   children: [
-                    RichText(text: TextSpan(text: "0 Seates Available")),
+                    RichText(
+                        text: TextSpan(
+                            text: "${circle.freeSeates} Seates Available")),
                     Padding(
                       padding: EdgeInsets.only(left: 6, right: 6),
                       child: Container(
@@ -61,7 +61,8 @@ class CircleListItem extends StatelessWidget {
                             color: Colors.white,
                           )),
                     ),
-                    RichText(text: TextSpan(text: "XKm")),
+                    // Distance Text will be modified with a method that will be in location-service.dart
+                    RichText(text: TextSpan(text: "6Km")),
                     Padding(
                       padding: EdgeInsets.only(left: 6, right: 6),
                       child: Container(
@@ -73,12 +74,12 @@ class CircleListItem extends StatelessWidget {
                             color: Colors.white,
                           )),
                     ),
-                    RichText(text: TextSpan(text: "2/2/2020")),
+                    RichText(text: TextSpan(text: "${circle.scheduledTo}")),
                   ],
                 ))
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
 }
