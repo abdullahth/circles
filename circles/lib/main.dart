@@ -1,4 +1,5 @@
-import 'package:circles/screens/welcome-auth-screens/welcome-screen/welcome-screen.dart';
+import 'package:circles/config/routes.dart';
+import 'package:circles/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -14,14 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Circles',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: WelcomeScreen()
-        //  user == null ? WelcomeScreen() : HomeScreen(),
-        );
+      debugShowCheckedModeBanner: false,
+      title: 'Circles',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        primaryColor: Colors.red,
+        accentColor: Colors.red[400],
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: HomePage(),
+      routes: routes,
+      //  user == null ? WelcomeScreen() : HomeScreen(),
+    );
   }
 }

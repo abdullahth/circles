@@ -1,4 +1,5 @@
 import 'package:circles/config/dim-config.dart';
+import 'package:circles/constants/constants.dart';
 import 'package:circles/models/circle-model.dart';
 import 'package:circles/screens/details-screens/circle/circle-details.dart';
 import 'package:flutter/material.dart';
@@ -35,9 +36,13 @@ Widget circleListItem(BuildContext context, Circle circle) {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
-                  // image: DecorationImage(
-                  //     image: AssetImage(
-                  //         "assets/images/welocme-image.jpeg"))
+                ),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: interests[circle.interestIndex].image,
+                  ),
                 ),
               ),
             ),

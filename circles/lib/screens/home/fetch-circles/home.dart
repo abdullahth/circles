@@ -20,14 +20,19 @@ class _FetchCirclesState extends State<FetchCircles> {
       /**The AppBar Here will not be applied by normal AppBar() but the SliverAppBar() */
       appBar: null,
       backgroundColor: Colors.white,
-      body: CustomScrollView(slivers: [
-        homePageAppBar(context),
-        SliverList(
-            delegate: SliverChildBuilderDelegate(
-                (context, index) =>
-                    circleListItem(context, dummyCircles[index]),
-                childCount: dummyCircles.length)),
-      ]),
+      body: RefreshIndicator(
+        onRefresh: () {
+          return null;
+        },
+        child: CustomScrollView(slivers: [
+          homePageAppBar(context),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                  (context, index) =>
+                      circleListItem(context, dummyCircles[index]),
+                  childCount: dummyCircles.length)),
+        ]),
+      ),
     );
   }
 }
