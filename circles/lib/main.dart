@@ -1,3 +1,4 @@
+import 'package:circles/Services/auth-services.dart';
 import 'package:circles/config/routes.dart';
 import 'package:circles/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,8 +7,10 @@ import 'package:flutter/material.dart';
 FirebaseUser user;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // If the User == null Navigate to Welcome Screen;
+  // Else Fetch All the User Data from he Cloud/ Storage and Navigate to HomePage;
+  AuthService.currentUser().then((result) => user = result);
   runApp(MyApp());
-  user = await FirebaseAuth.instance.currentUser();
 }
 
 class MyApp extends StatelessWidget {

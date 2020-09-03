@@ -1,6 +1,7 @@
 import 'package:circles/models/circle-model.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CircleDetails extends StatefulWidget {
   Circle circle;
   static String route = "CIRCLE_DETAILS_ROUTE";

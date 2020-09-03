@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:circles/config/dim-config.dart';
 import 'package:circles/constants/dummy-values.dart';
 import 'package:flutter/material.dart';
 

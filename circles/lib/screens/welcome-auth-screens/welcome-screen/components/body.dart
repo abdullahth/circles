@@ -1,4 +1,3 @@
-import 'package:circles/config/dim-config.dart';
 import 'package:circles/constants/button.dart';
 import 'package:circles/screens/welcome-auth-screens/auth/signin/signin.dart';
 import 'package:flutter/material.dart';
